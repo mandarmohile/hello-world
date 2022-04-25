@@ -16,4 +16,10 @@ public class TestController {
     public ResponseEntity<String> hello() {
         return new ResponseEntity<String>("Hello World!", HttpStatus.OK);
     }
+
+    @GetMapping("/greet")
+    public ResponseEntity<String> greet(String pParam) {
+        return new ResponseEntity<String>("Hello !" + pParam, HttpStatus.OK);
+    }
+
 }
